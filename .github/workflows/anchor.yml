@@ -22,7 +22,7 @@ jobs:
         echo "image=$IMAGE_NAME" >> $GITHUB_ENV
 
     - name: Scan Docker image
-      uses: anchore/scan-action@v2
+      uses: anchore/scan-action@main
       id: anchore-scan
       with:
         image: "${{ github.repository }}:${{ github.sha }}"
